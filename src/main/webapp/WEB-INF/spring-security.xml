@@ -11,17 +11,20 @@
 	<security:http create-session="stateless"
 		use-expressions="true">
 		<security:intercept-url pattern="/**"
-			access="hasRole('ROLE_REST')" />
+			access="hasRole('ROLE_ADMIN')" />
 		<security:http-basic />
 	</security:http>
 
 	<security:authentication-manager>
-	<security:authentication-provider>
-		<security:user-service>
-			<security:user name="admin" password="P@ssw0rd"
-				authorities="ROLE_REST" />
-		</security:user-service>
-	</security:authentication-provider>
+		<authentication-provider user-service-ref="myUserDetailsService">
+			<password-encoder hash="bcrypt" />
+		</authentication-provider>
+		<!-- <security:authentication-provider> -->
+		<!-- <security:user-service> -->
+		<!-- <security:user name="admin" password="P@ssw0rd" -->
+		<!-- authorities="ROLE_REST" /> -->
+		<!-- </security:user-service> -->
+		<!-- </security:authentication-provider> -->
 	</security:authentication-manager>
 
 </beans:beans>
