@@ -9,14 +9,14 @@ import com.example.webapi.model.User;
 
 public class UserDaoImpl implements UserDao {
 	private SessionFactory sessionFactory;
-	
+
 	@Override
 	@SuppressWarnings("unchecked")
 	public User findByUserName(String username) {
 
 		List<User> users = new ArrayList<User>();
 
-		users = getSessionFactory().getCurrentSession().createQuery("from User where username=?")
+		users = getSessionFactory().getCurrentSession().createQuery("from User where username = ?")
 				.setParameter(0, username).list();
 
 		if (users.size() > 0) {

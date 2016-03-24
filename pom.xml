@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<spring.security.version>4.0.1.RELEASE</spring.security.version>
-		<hibernate.version>5.1.0.Final</hibernate.version>
+		<hibernate.version>4.2.11.Final</hibernate.version>
 		<dbcp.version>1.4</dbcp.version>
 		<mysql.connector.version>5.1.34</mysql.connector.version>
 		<servletapi.version>2.5</servletapi.version>

@@ -63,7 +63,7 @@
 
 	<aop:config>
 		<aop:pointcut id="userServicePointCut"
-			expression="execution(* com.mkyong.users.service.*Service.*(..))" />
+			expression="execution(* com.example.webapi.service.*Service.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="userServicePointCut" />
 	</aop:config>
 
